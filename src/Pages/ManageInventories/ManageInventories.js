@@ -10,7 +10,7 @@ const ManageInventories = () => {
     const handleInventoryDelete = id => {
         const proceed = window.confirm("Are you sure You want to delete this inventory item?")
         if(proceed){
-            const url =`http://localhost:5000/inventory/${id}`;
+            const url =`https://guarded-sierra-71141.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

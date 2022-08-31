@@ -11,7 +11,7 @@ const ItemDetail = () => {
   const { _id, name, img, details, price, quantity, supplier, brand, mileage } =
     inventoryItems;
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://guarded-sierra-71141.herokuapp.com/inventory/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setInventoryItems(data));
@@ -40,7 +40,7 @@ const ItemDetail = () => {
         }
         setInventoryItems(updateItem);
         //send data to the server
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://guarded-sierra-71141.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -71,7 +71,7 @@ const ItemDetail = () => {
   }
   setInventoryItems(updateItem);
   //send data to the server
-  const url = `http://localhost:5000/inventory/${id}`;
+  const url = `https://guarded-sierra-71141.herokuapp.com/inventory/${id}`;
   fetch(url, {
       method: 'PUT',
       headers: {

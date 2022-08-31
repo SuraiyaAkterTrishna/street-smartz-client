@@ -36,7 +36,7 @@ const AddInventory = () => {
     };
     console.log(addItem);
     // send data to the server
-    axios.post('http://localhost:5000/inventory/', addItem)
+    axios.post('https://guarded-sierra-71141.herokuapp.com/inventory/', addItem)
     .then(response =>{
         const {data}= response;
         if(data.insertedId){

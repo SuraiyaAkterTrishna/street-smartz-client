@@ -9,7 +9,7 @@ const MyInventory = () => {
   const [myItems, setMyItems] = useState([]);
   useEffect(() => {
     if (user) {
-      fetch("http://localhost:5000/inventory/")
+      fetch("https://guarded-sierra-71141.herokuapp.com/inventory/")
         .then((res) => res.json())
         .then((data) => {
           const remainingItems = data.filter(
@@ -24,7 +24,7 @@ const MyInventory = () => {
       "Are you sure You want to delete this inventory item?"
     );
     if (proceed) {
-      const url = `http://localhost:5000/inventory/${id}`;
+      const url = `https://guarded-sierra-71141.herokuapp.com/inventory/${id}`;
       fetch(url, {
         method: "DELETE",
       })
