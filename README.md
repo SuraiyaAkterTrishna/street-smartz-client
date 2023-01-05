@@ -1,5 +1,5 @@
 # Website Name: Street Smartz
-## [Live Link](https://street-smartz.web.app/): [https://street-smartz.web.app/](https://street-smartz.web.app/)
+## [Live Link](https://street-smartz.netlify.app/): [https://street-smartz.netlify.app/](https://street-smartz.netlify.app/)
 
 ### `Features`
 - It’s a kind of Car Inventory Management base Website. Here the Users can log in or register with their email, and see all inventory items and new arrival items.
