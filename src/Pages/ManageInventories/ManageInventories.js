@@ -10,7 +10,7 @@ const ManageInventories = () => {
     const handleInventoryDelete = id => {
         const proceed = window.confirm("Are you sure You want to delete this inventory item?")
         if(proceed){
-            const url =`https://guarded-sierra-71141.herokuapp.com/inventory/${id}`;
+            const url =`https://street-smartz.up.railway.app/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

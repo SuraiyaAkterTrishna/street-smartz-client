@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useInventoryItems = () => {
     const [inventoryItems, setInventoryItems] = useState([]);
     useEffect(() => {
-        fetch('https://guarded-sierra-71141.herokuapp.com/inventory/')
+        fetch('https://street-smartz.up.railway.app/inventory/')
             .then(res => res.json())
             .then(data => setInventoryItems(data));
     }, [])

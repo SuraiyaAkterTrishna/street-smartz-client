@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import useInventoryItems from "../../hooks/useInventoryItems";
 import { toast } from 'react-toastify';
 import { HiArrowNarrowRight } from "react-icons/hi";
+import useInventoryItems from "../../hooks/useInventoryItems";
 
 const ItemDetail = () => {
   const { id } = useParams();
-  const [inventoryItems, setInventoryItems] = useInventoryItems([]);
+  const [inventoryItems, setInventoryItems] = useInventoryItems();
   const { _id, name, img, details, price, quantity, supplier, brand, mileage } =
     inventoryItems;
   useEffect(() => {
-    const url = `https://guarded-sierra-71141.herokuapp.com/inventory/${id}`;
+    const url = `https://street-smartz.up.railway.app/inventory/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setInventoryItems(data));
-  }, [_id]);
+  }, []);
   const {
     register,
     formState: { errors },
@@ -40,7 +40,7 @@ const ItemDetail = () => {
         }
         setInventoryItems(updateItem);
         //send data to the server
-        const url = `https://guarded-sierra-71141.herokuapp.com/inventory/${id}`;
+        const url = `https://street-smartz.up.railway.app/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -71,7 +71,7 @@ const ItemDetail = () => {
   }
   setInventoryItems(updateItem);
   //send data to the server
-  const url = `https://guarded-sierra-71141.herokuapp.com/inventory/${id}`;
+  const url = `https://street-smartz.up.railway.app/inventory/${id}`;
   fetch(url, {
       method: 'PUT',
       headers: {

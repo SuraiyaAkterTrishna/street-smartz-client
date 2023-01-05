@@ -11,6 +11,15 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 const Banner = () => {
+    // const { scroll } = useSpring({
+    //     scroll: (words.length - 1) * 50,
+    //     from: { scroll: 0 },
+    //     reset: true,
+    //     reverse: flip,
+    //     delay: 200,
+    //     config: config.molasses,
+    //     onRest: () => set(!flip),
+    //   })
     return (
         <div>
             <Swiper

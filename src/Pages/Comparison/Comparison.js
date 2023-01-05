@@ -1,4 +1,4 @@
-import { useControls } from "leva";
+
 import React, { useRef, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 
@@ -13,16 +13,7 @@ const trans = (x, y, s) =>
 const Comparison = () => {
   const ref = useRef(null);
   const [xys, set] = useState([0, 0, 1]);
-  const config = useControls({
-    mass: 1,
-    tension: 170,
-    friction: 26,
-    clamp: false,
-    precision: 0.01,
-    velocity: 0,
-    easing: (t) => t,
-  });
-  const props = useSpring({ xys, config });
+  const props = useSpring({ xys });
   return (
     <div className="mt-20 container mx-auto px-5">
       <p className="text-5xl uppercase font-bold tracking-widest text-primary text-center m-5">

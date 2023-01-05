@@ -36,7 +36,7 @@ const AddInventory = () => {
     };
     console.log(addItem);
     // send data to the server
-    axios.post('https://guarded-sierra-71141.herokuapp.com/inventory/', addItem)
+    axios.post('https://street-smartz.up.railway.app/inventory/', addItem)
     .then(response =>{
         const {data}= response;
         if(data.insertedId){

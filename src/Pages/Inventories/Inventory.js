@@ -1,4 +1,4 @@
-import { useControls } from "leva";
+
 import React, { useRef, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { useNavigate } from "react-router-dom";
@@ -20,16 +20,7 @@ const Inventory = ({ inventoryItem }) => {
   };
   const ref = useRef(null);
   const [xys, set] = useState([0, 0, 1]);
-  const config = useControls({
-    mass: 1,
-    tension: 170,
-    friction: 26,
-    clamp: false,
-    precision: 0.01,
-    velocity: 0,
-    easing: (t) => t,
-  });
-  const props = useSpring({ xys, config });
+  const props = useSpring({ xys});
   return (
     <div ref={ref}>
       <animated.div

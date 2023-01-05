@@ -6,7 +6,7 @@ const useToken = user =>{
         const email = user?.user?.email;
         const currentUser = {email: email};
         if(email){
-            fetch(`https://guarded-sierra-71141.herokuapp.com/user/${email}`, {
+            fetch(`https://street-smartz.up.railway.app/user/${email}`, {
                 method:'PUT',
                 headers: {
                     'content-type': 'application/json'
